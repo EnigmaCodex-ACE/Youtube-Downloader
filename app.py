@@ -69,8 +69,8 @@ class Download(QDialog):
             percent = readsofar*100/totalsize
             self.progress.setValue(percent)
 
-
-app = QApplication(sys.argv)
-dialog = Download()
-dialog.show()
-app.exec_()
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    dialog = Download()
+    dialog.show()
+    app.exec_()
